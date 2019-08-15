@@ -34,5 +34,12 @@
   
   
   ## 基于事件的同步
-  - 事件同步与互斥量同步相比有很大不同，区别在于，该方式下创建的对象，可以在auto-reset模式以及manual-reset模式中任选其一
-  
+- 事件同步与互斥量同步相比有很大不同，区别在于，该方式下创建的对象，可以在auto-reset模式以及manual-reset模式中任选其一
+- CreateEvent(LPSECURITY_ATTRIBUTES lpMutexAttributes,BOOL bManualReset,BOOL bInitialState,LPCTSTR lpName);
+
+    - bManualReset:传入TRUE时创建manual-reset模式的事件对象，传入FALSE时创建auto-reset模式的事件对象
+    - bInitialState：传入TRUE时创建signaled状态的事件对象，传入FALSE时创建non-signaled状态的事件对象
+    
+-manual-reset模式下常用的两个函数：(这两个函数也是配合WaitSingleObject函数一起实现同步的)
+    - ResetEvent//to the non-signaled
+    - SetEvent  //to the signaled
