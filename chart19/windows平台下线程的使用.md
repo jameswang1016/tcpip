@@ -38,4 +38,4 @@
 - manual-reset模式：该函数由于发生时间(变为signaled状态)返回时，不会自动将内核对象改为non-signaled状态。这种内核对象称为auto_reset模式。
 
 
-- WaitForMultipleObject
+
