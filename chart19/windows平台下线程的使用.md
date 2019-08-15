@@ -27,6 +27,7 @@ uintptr_t _beginthreadex (void * security, unsigned stack_size,unsigned(* start_
 ## WaitForSingleObject & WaitForMultipleObject
 
 DWORD WaitForSingleObject(HANDLE hHandle,DWORD dwMilliseconds);
+
     - hHandle:查看状态的内核对象句柄
     - dwMilliseconds: 以1/1000秒为单位指定超时，传递INFINITE时函数不会返回，直到内核对象变成signaled状态
     - 返回值：进入signaled状态返回 WAIT_OBJECT_0,超时返回WAIT——TIMEOUT
