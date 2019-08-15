@@ -40,6 +40,6 @@
     - bManualReset:传入TRUE时创建manual-reset模式的事件对象，传入FALSE时创建auto-reset模式的事件对象
     - bInitialState：传入TRUE时创建signaled状态的事件对象，传入FALSE时创建non-signaled状态的事件对象
     
--manual-reset模式下常用的两个函数：(这两个函数也是配合WaitSingleObject函数一起实现同步的)
+- manual-reset模式下常用的两个函数：(这两个函数也是配合WaitSingleObject函数一起实现同步的)
     - ResetEvent//to the non-signaled
     - SetEvent  //to the signaled
