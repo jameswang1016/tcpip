@@ -5,14 +5,14 @@
 - CreateThread函数
 - _beginthreadex函数（线程安全的）
 
-uintptr_t _beginthreadex (void * security, unsigned stack_size,unsigned(* start_address)(void *),void * arglist,unsigned initflag,unsigned * thrdaddr);
+- uintptr_t _beginthreadex (void * security, unsigned stack_size,unsigned(* start_address)(void *),void * arglist,unsigned initflag,unsigned * thrdaddr);
 
-- 重点关注一下3，4，6形参
-- start_address：传递线程的main函数信息
+  - 重点关注一下3，4，6形参
+  - start_address：传递线程的main函数信息
 
-- arglist：调用main函数时传递的参数信息
+  - arglist：调用main函数时传递的参数信息
 
-- thrdaddr：用于保存线程ID的变量地址值
+  - thrdaddr：用于保存线程ID的变量地址值
 
 
 # 内核对象的2种状态
@@ -26,7 +26,7 @@ uintptr_t _beginthreadex (void * security, unsigned stack_size,unsigned(* start_
    
 ## WaitForSingleObject & WaitForMultipleObject
 
-DWORD WaitForSingleObject(HANDLE hHandle,DWORD dwMilliseconds);
+- DWORD WaitForSingleObject(HANDLE hHandle,DWORD dwMilliseconds);
 
     - hHandle:查看状态的内核对象句柄
     - dwMilliseconds: 以1/1000秒为单位指定超时，传递INFINITE时函数不会返回，直到内核对象变成signaled状态
